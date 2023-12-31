@@ -1,0 +1,33 @@
+ion-title{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    color: #6750A4;
+}
+
+#content {
+    margin: 20% 5% 10% 5%;
+}
+
+.btnSignIn{
+    text-transform: none;
+    --background: #6750A4;
+}
+
+.btnRegister {
+    text-transform: none;
+    --color: #6750A4;
+    --background: #FFFBFE;
+}
+
+.logoApp{
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ion-label{
+    margin-top: 50px;
+    font-size: 14px;
+}

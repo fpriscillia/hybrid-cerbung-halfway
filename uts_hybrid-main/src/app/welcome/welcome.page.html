@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+  <div id="content">
+
+    <ion-title>Welcome to Cerbung App!</ion-title> <br>
+
+    <ion-img src="../assets/cerbung app.png" class="logoApp"></ion-img>
+    <br>
+    <ion-label>Before, access this app. Please login with your account. </ion-label><br><br>
+    <ion-button class="btnSignIn" expand="block" [routerLink]="['/signin']" routerLinkActive="router-link-active"
+      shape="round">Sign In</ion-button>
+    <ion-button class="btnRegister" expand="block" [routerLink]="['/register']" routerLinkActive="router-link-active"
+      shape="round">Register</ion-button>
+
+  </div>
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+      <ion-icon name="notifications-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Create Cerbung</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-buttons>
+      <ion-title>Create Cerbung</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="konten">
+    <h3>{{ new_cerbung.title }}</h3><br>
+    <ion-label>{{ new_cerbung.genre }}</ion-label>
+    <ion-label>{{ new_cerbung.access }}</ion-label><br>
+    <div id="kisah">
+      <p>{{ new_cerbung.description }}</p>
+      <ion-item-divider></ion-item-divider>
+      <p>{{ new_paragraph.text }}</p>
+    </div>
+    <div class="labelDesc">
+      <ion-checkbox class="cbAgree"></ion-checkbox>
+      <p>I agree with the rules and policies in creating Cerbung.
+        This includes not containing racial slurs, discrimination, religion, advertisements, and politics </p>
+    </div>
+    <ion-button class="btnPrev" shape="round" [routerLink]="['/create2']" routerLinkActive="router-link-active">Prev</ion-button>
+    <ion-button class="btnPublishCerbung" (click)="submitCerbung()" shape="round">Publish This Cerbung</ion-button>
+  </div>
+</ion-content>

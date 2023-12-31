@@ -1,0 +1,29 @@
+ion-toolbar {
+    --background: #f3def3;
+
+    ion-title {
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+ion-tab-bar,
+ion-tab-button {
+    background-color: #f3def3;
+}
+
+.main-content {
+    display: none;
+}
+
+ion-title {
+    color: #1C1B1F;
+}
+
+ion-icon {
+    color: black;
+}
+
+ion-label {
+    color: #49454F;
+}

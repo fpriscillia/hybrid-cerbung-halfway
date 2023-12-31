@@ -1,0 +1,31 @@
+ion-toolbar {
+    --background: #f3def3;
+
+    ion-title {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ion-icon {
+        font-size: 24px
+    }
+}
+
+ion-label {
+    font-size: 14px;
+    line-height: 1.28;
+}
+
+.btnRespond {
+    text-transform: none;
+    --background: #6750A4;
+    color: white;
+    font-weight: bold;
+}
+
+.btnView {
+    text-transform: none;
+    --background: none;
+    color: #6750A4;
+    font-weight: bold;
+}

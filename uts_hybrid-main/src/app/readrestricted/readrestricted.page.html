@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+      <ion-icon name="notifications-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Read Cerbung</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title size="large">Read Cerbung</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="isi">
+    <img [src]="cerbungs[index].url" class="imgBeach"> <br>
+    <ion-label><h1>{{ cerbungs[index].title }}</h1></ion-label>
+    <ion-label class="icon-label">
+      <ion-icon name="list-sharp" class="black-icon"></ion-icon> 13
+      <ion-icon name="thumbs-up-sharp" class="black-icon"></ion-icon>5
+    </ion-label><br>
+    <ion-label class="labelgenre">{{ cerbungs[index].genre }}</ion-label>
+    <ion-label class="labelgenre">{{ cerbungs[index].access }}</ion-label><br><br>
+    <ion-label>by {{ cerbungs[index].creator }}</ion-label>
+    <ion-card *ngFor="let par of paragraphs">
+      <ion-card-content>{{ par.text }}</ion-card-content>
+      <ion-card-content>by {{ par.writer }}</ion-card-content>
+    </ion-card>
+    <br>
+    <ion-button class="btnFollow" shape="round">+ Follow</ion-button>
+    <ion-button class="btnSubmit" shape="round">+ Request to Contribute</ion-button>
+  </div>
+</ion-content>

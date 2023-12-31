@@ -1,0 +1,95 @@
+ion-toolbar {
+    --background: #f3def3;
+
+    ion-title {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ion-icon {
+        font-size: 24px
+    }
+}
+
+ion-card-subtitle,
+ion-card-content {
+    font-size: 14px;
+}
+
+ion-avatar {
+    width: 100px;
+    height: 100px;
+}
+
+#frame {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.posisiagaknaik {
+    background-color: #FFFBFE;
+    border: 1px solid #79747E;
+    border-radius: 12px;
+    margin-top: -60px;
+    z-index: -1;
+}
+
+.tengah_atas {
+    margin-top: 60px;
+    text-align: center;
+    color: #1C1B1F;
+    font-size: 14px;
+}
+
+.contribute {
+    background-color: #FFFBFE;
+    border: 1px solid #79747E;
+    border-radius: 12px;
+    padding-left: 4px;
+    flex-direction: row;
+
+    .text-col {
+        left: 30px;
+        object-position: center;
+    }
+
+    ion-img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+}
+
+.frame-bawah {
+    margin-top: 20px;
+
+    .lblDetail {
+        margin-left: 10px;
+        text-align: center;
+    }
+}
+
+.black-icon {
+    color: black;
+}
+
+.icon-label {
+    display: flex;
+    align-items: center;
+    gap: 2px; //jarak icon sama teksnya
+    color: black;
+}
+
+.btnApprove {
+    text-transform: none;
+    --background: #6750A4;
+    margin-left: 150px;
+}
+
+.btnDecline {
+    text-transform: none;
+    --color: #6750A4;
+    --background: #FFFBFE;
+    margin-left: 10px;
+}

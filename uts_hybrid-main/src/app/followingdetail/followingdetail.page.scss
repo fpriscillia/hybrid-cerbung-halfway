@@ -1,0 +1,81 @@
+ion-toolbar {
+    --background: #f3def3;
+
+    ion-title {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ion-icon {
+        font-size: 24px
+    }
+}
+
+ion-avatar{ 
+    width: 110px; 
+    height:110px; 
+} 
+#frame{ 
+    display: flex; 
+    justify-content: center; 
+    margin-top:20px; 
+}
+.agaknaik{ 
+    background-color: #FFFBFE;
+    border: 1px solid #79747E;
+    border-radius: 12px;
+    margin-top: -60px;
+    z-index: -1;
+} 
+.tengah_atasberjarak{ 
+    margin-top: 60px;
+    text-align: center;
+    color: #1C1B1F;
+    font-size: 14px;
+}
+.btnFollow {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin-right: auto;
+    margin-bottom: 10px;
+    text-transform: none;
+    --background: #6750A4;
+    margin-left: 135px;
+    border-width: 1px solid ;
+}
+
+.keterangan {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    height: 1px;
+    background-color: #79747E;
+    margin: 20px 0; /* Sesuaikan margin atas dan bawah sesuai kebutuhan */
+}
+
+.followingcerbung {
+    background-color: #FFFBFE;
+    border: 1px solid #79747E;
+    border-radius: 12px;
+    flex-direction: row;
+
+    .text-col {
+        left: 40px;
+        object-position: center;
+        color: #1C1B1F;
+    }
+    
+    ion-img {
+        width: 108px;
+        height: 100px;
+        object-fit: cover;
+    }
+    
+}

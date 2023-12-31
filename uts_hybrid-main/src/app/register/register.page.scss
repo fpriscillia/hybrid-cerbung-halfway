@@ -1,0 +1,35 @@
+#content {
+    margin: 10% 5% 10% 5%;;
+    ion-title {
+        text-align: left;
+        font-size: 20px;
+        font-weight: medium;
+        padding-top: 35px;
+    }
+
+    p {
+        padding-left: 20px;
+        font-size: 14px;
+    }
+
+    ion-input {
+        border: 1px solid #6750A4;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+}
+
+#lblAccount {
+    text-align: center;
+    margin-top: 5px;
+
+    #lblSignIn {
+        color: #6750A4;
+        font-weight: bold;
+    }
+}
+
+.btnRegister {
+    text-transform: none;
+    --background: #6750A4;
+}

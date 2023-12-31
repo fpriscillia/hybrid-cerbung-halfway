@@ -1,0 +1,106 @@
+ion-toolbar {
+  --background: #f3def3;
+
+  ion-title {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  ion-icon {
+    font-size: 24px
+  }
+}
+
+.content {
+  padding: 0px 20px;
+}
+
+ion-card {
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  ion-card-title {
+    margin-top:4px;
+    //margin-left: 10px;
+    font-size: 16px;
+  }
+  ion-card-subtitle {
+    margin-top: 4px;
+    font-size: 14px;
+    //margin-left: 10px;
+  }
+  ion-label {
+    margin-top: 4px;
+    //margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 2px; //jarak icon sama teksnya
+    color: black;
+  }
+
+  background-color: #FFFBFE;
+  border: 1px solid #79747E;
+  border-radius: 12px;
+  margin: 15px 0px 10px 0px;
+}
+
+.btnRead {
+  text-transform: none;
+  --background: #6750A4;
+  --color: white;
+  position: relative;
+  top: -12px;
+  left: 250px;
+}
+
+.btnKategori {
+  ion-button {
+    padding-left:5px;
+    text-transform: none;
+  }
+  #btnAll{
+    --background:#E8DEF8;
+    --color:#1D192B;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  #btnAksi, #btnKocak, #btnHorror{
+    --background: #FFFBFE;
+    --border-color: #79747E;
+    color: #49454F;
+  }
+  margin: 10px 0px 0px 0px;
+}
+
+.black-icon {
+  color: black;
+}
+
+// #container {
+//   text-align: center;
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+// #container strong {
+//   font-size: 20px;
+//   line-height: 26px;
+// }
+
+// #container p {
+//   font-size: 16px;
+//   line-height: 22px;
+
+//   color: #8c8c8c;
+
+//   margin: 0;
+// }
+
+// #container a {
+//   text-decoration: none;
+// }

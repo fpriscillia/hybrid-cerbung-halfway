@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/welcome"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/welcome"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <div id="content">
+    <ion-title>Sign In Account</ion-title>
+    <p>Input your username & password!</p>
+    <ion-list>
+      <ion-item>
+        <ion-input label="Username" [(ngModel)]="username" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Password" [(ngModel)]="password" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <br><br>
+      <ion-button (click)="login()" class="btnSignIn" expand="block" shape="round">Sign In</ion-button><br>
+      <div id="lblAccount">
+        <ion-label>Don't have any Account? </ion-label>
+        <ion-label id="lblSignUp" [routerLink]="['/register']" routerLinkActive="router-link-active">Register</ion-label>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

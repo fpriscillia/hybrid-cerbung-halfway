@@ -1,0 +1,26 @@
+ion-toolbar{
+    --background: #f3def3;
+    ion-title{
+        font-weight: bold;
+        text-align: center;
+    }
+    ion-icon {
+        font-size: 24px
+    }
+}
+
+#content {
+    padding: 20px;
+}
+
+ion-label{
+    font-size: 14px;
+    text-align: center;
+    margin-left: 160px;
+}
+
+.btnNext {
+    text-transform: none;
+    --background: #6750A4;
+    margin-left: 70px;
+}

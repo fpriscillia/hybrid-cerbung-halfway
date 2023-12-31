@@ -1,0 +1,35 @@
+ion-toolbar {
+    --background: #f3def3;
+
+    ion-title {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ion-icon {
+        font-size: 24px
+    }
+}
+
+.details {
+    background-color: #FFFBFE;
+    border: 1px solid #79747E;
+    border-radius: 12px;
+    flex-direction: row;
+    .text-col{
+        left: 20px;
+    }
+    ion-img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    ion-card-title {
+        color: #1C1B1F;
+    }
+
+    ion-card-subtitle {
+        color: #49454F;
+    }
+}

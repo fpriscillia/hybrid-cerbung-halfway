@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+      <ion-icon name="notifications-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Users</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-buttons>
+      <ion-title size="large">Users</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-segment [(ngModel)]="jenistampilan">
+      <ion-segment-button value="most">
+        <ion-label>Most Liked</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Following">
+        <ion-label>Following</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <ion-list *ngIf="jenistampilan==='most'">
+    <ion-item *ngFor="let user of mostLikeds">
+      <ion-avatar>
+        <ion-img [src]="user.url"></ion-img>
+      </ion-avatar>
+      <ion-label>{{user.name}}
+        <p>since {{user.since}}</p>
+      </ion-label>
+      <p class="users_like">{{user.likes}}</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="jenistampilan==='Following'">
+    <ion-item *ngFor="let user of followings; let i = index" [routerLink]="'/followingdetail/' + (i)">
+      <ion-avatar>
+        <ion-img [src]="user.url"></ion-img>
+      </ion-avatar>
+      <ion-label>{{user.name}}
+        <p>since {{user.since}}</p>
+        <p>Latest post: {{user.latest}}</p>
+      </ion-label>
+      <p class="users_like">{{user.likes}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

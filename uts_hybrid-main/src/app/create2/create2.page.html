@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+      <ion-icon name="notifications-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Create Cerbung</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-buttons>
+      <ion-title>Create Cerbung</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="isi">
+    <ion-list>
+      <p>Access to This Cerbung</p>
+      <ion-radio-group id="rbo" [(ngModel)]="new_access">
+        <ion-radio value="Restricted" labelPlacement="end">Restricted <br>
+          <ion-label class="subheaders">(all approved users can contributes)</ion-label>
+        </ion-radio>
+        <ion-radio value="Public" labelPlacement="end">Public <br>
+          <ion-label class="subheaders">(all users can contributes)</ion-label>
+        </ion-radio>
+      </ion-radio-group>
+      <ion-item>
+        <ion-textarea [(ngModel)]="new_firstpar" label="Write First Paragraph" labelPlacement="floating"></ion-textarea>
+      </ion-item>
+      <ion-label id="lblCharacters">(60 of 70 characters)</ion-label><br><br><br><br>
+      <ion-button class="btnPrev" shape="round" [routerLink]="['/create']"
+        routerLinkActive="router-link-active">Prev</ion-button>
+      <ion-label>2 of 3</ion-label>
+      <ion-button class="btnNext" (click)="inputData()" shape="round">Next</ion-button>
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Notifications</ion-title>
+    <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+      <ion-icon name="notifications-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home"></ion-back-button>
+      </ion-buttons>
+      <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-buttons>
+      <ion-title size="large">Notifications</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="content">
+    <ion-list>
+      <ion-item>
+        <ion-label> 09/09/2023 <br>
+          MistyFox Request to Contributes
+        </ion-label>
+        <ion-button class="btnRespond" [routerLink]="['/respond']" routerLinkActive="router-link-active"> Respond
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label> 08/09/2023 <br>
+          Derailed Request to Contributes
+        </ion-label>
+        <ion-button class="btnRespond"> Respond </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label> 02/09/2023 <br>
+          LadyWhite Request to Contributes
+        </ion-label>
+        <ion-button class="btnRespond"> Respond </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label> 09/09/2023 <br>
+          NebulaNomad publish new Cerbung
+        </ion-label>
+        <ion-button class="btnView"> View </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label> 28/08/2023 <br>
+          SolticeDreamer publish new Cerbung
+        </ion-label>
+        <ion-button class="btnView"> View </ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

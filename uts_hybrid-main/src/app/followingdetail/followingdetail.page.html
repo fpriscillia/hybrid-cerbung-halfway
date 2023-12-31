@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+      <ion-icon name="notifications-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>{{followings[index].name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-buttons>
+      <ion-title>{{followings[index].name}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="frame">
+    <ion-avatar>
+      <ion-img [src]="followings[index].url"></ion-img>
+    </ion-avatar>
+  </div>
+  <ion-card class="agaknaik">
+    <ion-card-content class="tengah_atasberjarak">
+      {{followings[index].name}} <br>
+      {{followings[index].likes}} Likes | {{followings[index].created}} Cerbuns Created<br>
+      Latest post: {{followings[index].latest}}
+    </ion-card-content>
+    <ion-button class="btnFollow" shape="round">+ Follow</ion-button>
+  </ion-card>
+
+  <hr>
+
+  <div class="frame-bawah">
+    <ion-label class="keterangan">{{followings[index].name}} Cerbungs</ion-label>
+    <ion-card class="followingcerbung" *ngFor="let user of followingcerbungs">
+      <ion-card-content>
+        <ion-row>
+          <ion-col size="3">
+            <ion-img [src]="user.url" />
+          </ion-col>
+          <ion-col size="9" class="text-col">
+            <ion-card-title>{{user.title}}</ion-card-title>
+            <ion-card-subtitle>Last update: {{user.update}}</ion-card-subtitle>
+            <ion-label class="icon-label">
+              <ion-icon name="thumbs-up-sharp" class="black-icon"></ion-icon>
+              {{user.like}}
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

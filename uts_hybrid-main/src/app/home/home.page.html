@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+      <ion-icon name="notifications-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title> Cerbung </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-buttons>
+      <ion-title size="large">Cerbung</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="content">
+    <ion-list>
+      <ion-item>
+        <ion-input label="Search Cerbung" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <div class="btnKategori">
+        <ion-button id="btnAll">All</ion-button>
+        <ion-button id="btnAksi" fill="outline">Action</ion-button>
+        <ion-button id="btnHorror" fill="outline">Horror</ion-button>
+        <ion-button id="btnKocak" fill="outline">Comedy</ion-button>
+      </div>
+      <ion-card *ngFor="let cerbung of cerbungs; let i=index">
+        <img [src]="cerbung.url">
+        <ion-card-header>
+          <ion-card-title>{{ cerbung.title }}</ion-card-title>
+          <ion-card-subtitle>{{ cerbung.creator }}</ion-card-subtitle>
+          <ion-label>
+            <ion-icon name="list-sharp" class="black-icon"></ion-icon>
+            13
+            <ion-icon name="thumbs-up-sharp" class="black-icon"></ion-icon>
+            5
+          </ion-label>
+        </ion-card-header>
+        <ion-card-content>
+          {{ cerbung.description }}
+        </ion-card-content>
+        <ion-button class="btnRead" shape="round" (click)="readCerbung(i)">Read</ion-button>
+        
+      </ion-card>
+    </ion-list>
+  </div>
+</ion-content>

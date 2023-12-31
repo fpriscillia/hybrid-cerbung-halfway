@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+      <ion-icon name="notifications-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Prefs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end" [routerLink]="['/notification']" routerLinkActive="router-link-active">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-buttons>
+      <ion-title size="large">Prefs</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="content">
+    <ion-list>
+      <div id="frame">
+        <ion-avatar>
+          <ion-img [src]="userLogin.photoUrl"></ion-img>
+        </ion-avatar>
+        <ion-icon name="power-outline" class="power" (click)="logout()"></ion-icon>
+      </div><br>
+      <ion-title id="username">{{userLogin.username}}</ion-title><br><br>
+      <ion-item>
+        <ion-toggle id="toggleDark">Dark Mode</ion-toggle><br /><br />
+      </ion-item>
+      <ion-item>
+        <ion-toggle id="toggleNotif">Notifications</ion-toggle><br /><br />
+      </ion-item>
+      <ion-item>
+        <ion-input label="Old Password : " placeholder="***********" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="New Password : " placeholder="***********" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Retype New Password : " placeholder="***********" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <br><br>
+      <ion-button id="btnChangePwd" shape="round">Change Password</ion-button>
+    </ion-list>
+  </div>
+</ion-content>

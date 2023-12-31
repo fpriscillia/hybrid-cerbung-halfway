@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/welcome"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/welcome"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <div id="content">
+    <ion-title>Register Account</ion-title>
+    <p>Input your information details!</p>
+    <ion-list>
+      <ion-item>
+        <ion-input label="Username" [(ngModel)]="username" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Profile Picture URL" [(ngModel)]="pictureUrl" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Password" [(ngModel)]="password" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Confirmation Password" [(ngModel)]="confirmPwd"labelPlacement="floating"></ion-input>
+      </ion-item>
+      <br><br>
+      <ion-button class="btnRegister" expand="block" (click)="register()" shape="round">Register</ion-button><br>
+      <div id="lblAccount">
+        <ion-label>Already have an account? </ion-label>
+        <ion-label id="lblSignIn" [routerLink]="['/signin']" routerLinkActive="router-link-active">Sign In</ion-label>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

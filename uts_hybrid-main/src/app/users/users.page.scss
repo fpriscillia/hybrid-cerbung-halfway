@@ -1,0 +1,23 @@
+ion-toolbar {
+    --background: #f3def3;
+
+    ion-title {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    ion-icon {
+        font-size: 24px
+    }
+
+}
+
+ion-avatar {
+    width: 65px;
+    height: 65px;
+    margin-right: 10px;
+}
+
+.users_like {
+    font-weight: bold;
+}
